@@ -104,10 +104,10 @@ public class DeleteEntry {
                 String sql = "DELETE FROM DAILYTASK WHERE ID = ?";
                 PreparedStatement stmnt = conn.prepareStatement(sql);
                 stmnt.setInt(1, num);
-
+                //Take YES or NO
                 System.out.print("1. Are you sure you want to delete the entry entry Y/N: ");
                 String a = sn.next();
-
+                //Finally action to be performed
                 if (a.equals("Y")) {
                     int rs = stmnt.executeUpdate();
                     if (rs > 0) {

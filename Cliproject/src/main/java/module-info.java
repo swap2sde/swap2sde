@@ -5,6 +5,7 @@ module org.example.cliproject {
     requires org.json;
     requires java.naming;
     requires java.sql;
+    requires jdk.compiler;
 
 
     opens org.example.cliproject to javafx.fxml;
