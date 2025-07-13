@@ -63,7 +63,7 @@ public class DeleteEntry {
 
                         if (jsonString != null && !jsonString.isEmpty() && !jsonString.equals("")) {
                             // Wrap in brackets to convert to valid JSON array
-                            results = new JSONArray("[" + jsonString +  "]");
+                            results = new JSONArray("[\n" + jsonString +  "\n]");
                         }
                         else{
                             System.out.println("**Entry doesn't exist in " +  serverity + " catgeory**");

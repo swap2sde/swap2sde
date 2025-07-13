@@ -70,7 +70,8 @@ public class ViewEntry {
 
                     if (jsonString != null && !jsonString.isEmpty() && !jsonString.equals("")) {
                         // Wrap in brackets to convert to valid JSON array
-                        results = new JSONArray("[" + jsonString + "]");
+                        String formattedJsonString = jsonString.replace("},{", "},\n{");
+                        results = new JSONArray("[" + formattedJsonString + "]");
                     } else {
                         System.out.println("**Entry doesn't exist in " + serverity + " catgeory**");
                         System.out.println();
